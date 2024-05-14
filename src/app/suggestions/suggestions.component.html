@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - www.codingnepalweb.com -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Slider in HTML CSS and JavaScript | CodingNepal</title>
+    <!-- Google Fonts Link For Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="slider-wrapper">
+        <button id="prev-slide" class="slide-button material-symbols-rounded">
+          chevron_left
+        </button>
+        <ul class="image-list">
+          <img class="image-item" src="https://rukminim2.flixcart.com/image/550/650/xif0q/shirt/x/h/l/m-frml-st2-vebnor-original-imagqwvhhavmy8mz.jpeg?q=90&crop=false" alt="img-1" />
+          <img class="image-item" src="https://5.imimg.com/data5/SELLER/Default/2021/1/SV/VO/EW/25739518/pink-women-maxi-dress.jpg" alt="img-2" />
+          <img class="image-item" src="https://5.imimg.com/data5/SELLER/Default/2022/9/BG/WR/VC/15408429/girls-kids-wear.jpg" alt="img-3" />
+          <img class="image-item" src="https://5.imimg.com/data5/WT/YV/MY-2746980/kids-casual-wear-28boys-29.jpg" alt="img-4" />
+          <img class="image-item" src="https://rukminim2.flixcart.com/image/850/1000/xif0q/watch/7/n/1/-original-imagqhvfaytxwmuu.jpeg?q=90&crop=false" alt="img-5" />
+          <img class="image-item" src="https://m.media-amazon.com/images/I/71NZxcWS+rS._AC_UY350_.jpg" alt="img-6" />
+          <img class="image-item" src="https://images-cdn.ubuy.co.in/63ce0419a5d2233a224c6cc4-hair-accessories-for-girls-variety-pack.jpg" alt="img-7" />
+          <img class="image-item" src="https://previews.123rf.com/images/photobyphotoboy/photobyphotoboy1609/photobyphotoboy160900090/63313105-travel-clothing-accessories-apparel-along-for-the-trip.jpg" alt="img-8" />
+          <img class="image-item" src="https://images-cdn.ubuy.co.in/650ccda7dcfc9e0f1238ce06-kitchen-utensils-set-cooking-utensil.jpg" alt="img-9" />
+          <img class="image-item" src="https://cdnjs.angroos.com/wp-content/uploads/2022/02/001-40-scaled.jpg" alt="img-10" />
+        </ul>
+        <!-- <button id="next-slide" class="slide-button material-symbols-rounded">
+          chevron_right
+        </button> -->
+      </div>
+      <div class="slider-scrollbar">
+        <div class="scrollbar-track">
+          <div class="scrollbar-thumb"></div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    window.addEventListener("load", () => {
+    const imageList = document.querySelector(".image-list");
+    const slideButtons = document.querySelectorAll(".slide-button");
+    const sliderScrollbar = document.querySelector(".slider-scrollbar");
+    const scrollbarThumb = sliderScrollbar.querySelector(".scrollbar-thumb");
+    const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
+
+    const handleSlideButtons = () => {
+        slideButtons[0].style.display = imageList.scrollLeft <= 0 ? "none" : "flex";
+        slideButtons[1].style.display = imageList.scrollLeft >= maxScrollLeft ? "none" : "flex";
+    };
+
+    const updateScrollThumbPosition = () => {
+        const scrollPosition = imageList.scrollLeft;
+        const thumbPosition = (scrollPosition / maxScrollLeft) * (sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth);
+        scrollbarThumb.style.left = `${thumbPosition}px`;
+    };
+
+    // Initialize slider
+    handleSlideButtons();
+    updateScrollThumbPosition();
+
+    // Event listeners
+    slideButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            const direction = button.id === "prev-slide" ? -1 : 1;
+            const scrollAmount = imageList.clientWidth * direction;
+            imageList.scrollBy({ left: scrollAmount, behavior: "smooth" });
+        });
+    });
+
+    imageList.addEventListener("scroll", () => {
+        handleSlideButtons();
+        updateScrollThumbPosition();
+    });
+
+    scrollbarThumb.addEventListener("mousedown", (e) => {
+        // Thumb dragging logic
+    });
+
+    // Other event listeners...
+});
+
+    </script>
+  </body>
+</html>

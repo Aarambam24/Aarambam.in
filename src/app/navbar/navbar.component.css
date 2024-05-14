@@ -3,7 +3,7 @@
   }
   body {
     margin: 0;
-    min-height: 200vh;
+    /* min-height: 200vh; */
     font-size: 0;
     font-family: Helvetica, Verdana, sans-serif;
   }
@@ -118,4 +118,9 @@
 }
 .dropdown:hover .dropdown-menu {
     display: block;
+}
+.carousel-inner img {
+  width: 100%; /* Set the width to 100% of the parent container */
+  height: 40%; /* Maintain aspect ratio */
+  overflow: hidden;
 }
