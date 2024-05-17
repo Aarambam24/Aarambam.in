@@ -142,3 +142,10 @@
       width: 20%;
     }
   }
+  .suggestions-title {
+    text-align: center; /* Center the text horizontally */
+    margin-bottom: 20px;
+    font-size: 50px;
+   background-color: gray ;
+  }
+  
