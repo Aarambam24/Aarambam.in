@@ -1,0 +1,31 @@
+body {
+    box-sizing:border-box;
+  margin:0;
+  padding:0;
+  }
+  
+  #main-navbar {
+    font: 1.15em;
+    background:#8CCCED;
+  }
+  
+  #main-navbar ul {
+    margin: 0;
+    padding-left: 85%;
+  }
+  
+  #main-navbar li {
+    display: inline-block;
+    padding: 10px 20px;
+  }
+  
+  #main-navbar li a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  #main-navbar li a:hover {
+    padding-bottom: 3px;
+    color:white;
+  }
+  
