@@ -1,9 +1,17 @@
 .heading {
     color: #006E7F;
-    font-family: "roboto";
+    font-family: "Ubuntu";
+    font-weight: bold;
     font-size: 25px;
 
 }
 .footer-copyright {
 color: black;
+}
+
+
+.button {
+    padding: 5px;
+    background-color: #006E7F;
+    color: aliceblue;
 }
