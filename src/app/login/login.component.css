@@ -68,8 +68,8 @@ body{
     text-decoration: none;
 
 }
-.remember-forgot align-self: :hover{
-    text-decorater:underline;
+.remember-forgot align-self :hover{
+    text-decoration: underline;
 }
 .wrapper .btn{
     width: 100%;
