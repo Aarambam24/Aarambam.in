@@ -6,10 +6,17 @@
     <title>Document</title>
     <!-- Include Font Awesome CSS for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Style for carousel images */
+        .carousel-inner img {
+            width: 100%; /* Set the width to 100% of the parent container */
+            height: auto; /* Maintain aspect ratio */
+        }
+    </style>
 </head>
 <body>
     <nav>
-        <a href="#" style="font-size: 24px;"><b>Aarambam</b></a>
+        <a href="#" style="font-size: 24px;"><b>Aarambam.in</b></a>
         <div class="search-bar">
             <input type="text" class="search-input" placeholder="Search...">
             <!-- Camera icon for search -->
@@ -27,15 +34,30 @@
                     <li><a href="#"> Men</a></li>
                     <li><a href="#"> Women</a></li>
                     <li><a href="#"> Kids</a></li>
+                    <li><a href="#"> contact us</a></li>
                 </ul>
             </li>
             <li><a href="#"><i class="fas fa-shopping-cart"></i> Cart</a></li>
             <li><a href="#"><i class="fas fa-envelope"></i> Contact us</a></li>
             <li><a href="#"><i class="fas fa-user"></i> Profile</a></li>
-        </ul>
-        
-      </nav> 
-      <img src="https://c8.alamy.com/comp/2D7GAPB/online-sale-shopping-vector-banner-design-online-shopping-text-with-phone-cart-and-paper-bag-elements-in-smartphone-app-store-for-mobile-business-2D7GAPB.jpg" alt="Placeholder Image">
+        </ul>       
+    </nav> 
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active">
+                <img src="{{ getSlide() }}" alt="slide1">
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // Auto slide the carousel every 3 seconds
+        $(document).ready(function(){
+            $('.carousel').carousel({
+                interval: 3000
+            });
+        });
+    </script>
 </body>
 </html>
-
