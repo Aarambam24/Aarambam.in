@@ -7,6 +7,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { TopnavbarComponent } from './topnavbar/topnavbar.component';
 import { SuggestionsComponent } from './suggestions/suggestions.component';
 import { FooterComponent } from './footer/footer.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { FooterComponent } from './footer/footer.component';
     TopnavbarComponent,
     SuggestionsComponent,
     FooterComponent,
+    LoginComponent,
 
   ],
   imports: [
