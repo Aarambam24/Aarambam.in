@@ -9,17 +9,32 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: lightskyblue;
+    background-image: url('http://thewowstyle.com/wp-content/uploads/2015/01/nature-images.jpg');
+    /* background-color: #DAFFFE; */
     background-size: cover;
     background-position: center;
 }
-.wrapper{
+/* .wrapper{
     width: 420px;
-    background: white;
-    color: black;
+    background: #006E7F ; 
+    background: ;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #ffffff;
     border-radius: 12px;
     padding: 30px 40px;
+} */
+
+.wrapper{
+    width: 420px;
+    background: rgba(0, 110, 127, 0.8); /* Adjust the alpha value to control the transparency */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+    border-radius: 12px;
+    padding: 30px 40px;
+    backdrop-filter: blur(2px); /* Apply blur effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
 }
+
 .wrapper h1{
     font-size: 36px;
     text-align: center;
@@ -36,14 +51,14 @@ body{
     background: transparent;
     border: none;
     outline: none;
-    border: 2px solid black;
+    border: 2px solid #ffffff;
     border-radius: 400px;
     font-size: 16px;
-    color: black;
+    color: #ffffff;
     padding: 20px 45px 20px 20px ;
 }
 .input-box input::placeholder{
-    color: black;
+    color: rgb(235, 229, 229);
 }
 .input-box i{
     position: absolute;
@@ -63,12 +78,12 @@ body{
     accent-color: white;
     margin-right: 3px;
 }
-.remember-forgot a{
-    color: #fff;
+.remember-forget a{
+    color: #ffffff;
     text-decoration: none;
 
 }
-.remember-forgot align-self :hover{
+.remember-forget align-self :hover{
     text-decoration: underline;
 }
 .wrapper .btn{
@@ -91,7 +106,7 @@ body{
     margin-top: 50px 0 50px;
 }
 .register-link p a{
-    color: blue;
+    color: rgb(183, 75, 68);
     text-decoration: none;
     font-weight: 600;
 }
