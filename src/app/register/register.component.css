@@ -9,7 +9,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-image: url('http://thewowstyle.com/wp-content/uploads/2015/01/nature-images.jpg');
+    background-image: url('https://img.freepik.com/free-photo/top-view-business-office-desk-background-applying-job-form-pen-pencil-eyeglasses-tree-wooden-table-background-with-copy-space_1921-21.jpg?t=st=1717092665~exp=1717096265~hmac=87ea0b316f58a46b431b371480af918098c6d695f15e38aafa55e9821f6d5111&w=1060');
     /* background-color: #DAFFFE; */
     background-size: cover;
     background-position: center;
@@ -26,13 +26,13 @@ body{
 
 .wrapper{
     width: 420px;
-    background: rgba(0, 110, 127, 0.8); /* Adjust the alpha value to control the transparency */
+    background: rgba(179, 177, 138, 0.8); /* Adjust the alpha value to control the transparency */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     color: #ffffff;
     border-radius: 12px;
     padding: 30px 40px;
-    backdrop-filter: blur(2px); /* Apply blur effect */
-    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    backdrop-filter: blur(0px); /* Apply blur effect */
+    -webkit-backdrop-filter: blur(15px); /* For Safari */
 }
 
 .wrapper h1{
