@@ -12,6 +12,8 @@ color: black;
 
 .button {
     padding: 5px;
+    margin: 10px;
+    border-radius: 15px;
     background-color: #006E7F;
     color: aliceblue;
 }
